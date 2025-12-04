@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
-import HomePage from "./pages/HomePage";
+
+/*import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ReviewsPage from "./pages/ReviewsPage";
 import TeachersPage from "./pages/TeachersPage";
 import GiftsPage from "./pages/GiftsPage";
 import PaymentPage from "./pages/PaymentPage";
 import Header from "./componets/Header/Header";
-import Footer from "./componets/Footer/Footer";
+import Footer from "./componets/Footer/Footer";*/
 
 const HomePage = () => <div className={styles.page}>Главная</div>;
 const AboutPage = () => <div className={styles.page}>О ключе</div>;
