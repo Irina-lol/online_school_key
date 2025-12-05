@@ -16,10 +16,26 @@ const Header = () => {
   };
 
   const navItems = [
-    { path: '/about', label: 'О Ключе' },
-    { path: '/reviews', label: 'Отзывы' },
-    { path: '/teachers', label: 'Наши преподователи' },
-    { path: '/gifts', label: 'Подарки' },
+    {
+      path: '/about',
+      label: 'О Ключе',
+      icon: 'fas fa-key'
+    },
+    {
+      path: '/reviews',
+      label: 'Отзывы',
+      icon: 'fas fa-star'
+    },
+    {
+      path: '/teachers',
+      label: 'Наши преподаватели',
+      icon: 'fas fa-chalkboard-teacher'
+    },
+    {
+      path: '/gifts',
+      label: 'Подарки',
+      icon: 'fas fa-gift'
+    },
   ];
 
   return (
@@ -36,7 +52,7 @@ const Header = () => {
           </div>
         </NavLink>
 
-        <nav className={styles.navDesctop}>
+        <nav className={styles.navDesktop}>
           <ul className={styles.navList}>
             {navItems.map((item) => (
               <li key={item.path} className={styles.navItem}>
@@ -46,6 +62,7 @@ const Header = () => {
                     `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
                   }
                 >
+                  <i className={item.icon}></i>
                   {item.label}
                 </NavLink>
               </li>
@@ -58,7 +75,8 @@ const Header = () => {
             className={styles.loginButton}
             onClick={handleLogin}
           >
-            {isLoggedIn ? 'Личный кабинет' : 'Войти'}
+            <i className="fas fa-sign-in-alt"></i>
+            {isLoggedIn ? ' Личный кабинет' : ' Войти'}
           </button>
 
           <button
@@ -84,6 +102,7 @@ const Header = () => {
                     }
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <i className={item.icon}></i>
                     {item.label}
                   </NavLink>
                 </li>
@@ -97,7 +116,8 @@ const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                {isLoggedIn ? 'Личный кабинет' : 'Войти'}
+                <i className="fas fa-sign-in-alt"></i>
+                {isLoggedIn ? ' Личный кабинет' : ' Войти'}
               </button>
             </div>
           </nav>

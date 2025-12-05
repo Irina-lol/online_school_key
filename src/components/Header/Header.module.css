@@ -1,0 +1,441 @@
+.header {
+  background-color: linear-gradient(135deg, #1a1939 0%, #2d2b55 100%);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoImage {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(108, 99, 255, 0.4));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+}
+
+.logoText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(108, 99, 255, 0.3);
+  letter-spacing: 1px;
+}
+
+.navDesktop {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: #b019b0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.navLink:hover::before {
+  left: 100%;
+}
+
+.navLink:hover {
+  color: #610693;
+  background: rgba(108, 99, 255, 0.15);
+  border-bottom: rgba(108, 99, 255, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+.navLinkActive {
+  color: white;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.2)) 0%, rgba(255, 101, 132, 0.2) 100%;
+  border: 1px solid rgba(108, 99, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.25);
+}
+
+.navLinkActive::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #FF6584);
+  border-radius: 2px;
+}
+
+.authContainer {
+  display: none;
+}
+
+.loginButton {
+  background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.loginButton:hover::before {
+  left: 100%;
+}
+
+.loginButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.loginButton:active {
+  transform: translateY(-1px);
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burgerLine {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #FF6584);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burgerLineActive1 {
+  transform: rotate(45deg) translate(9px, 8px);
+  background: #FF6584;
+}
+
+.burgerLineActive2 {
+  opacity: 0;
+}
+
+.burgerLineActive3 {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background: #6C63FF;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1939 0%, #2d2b55 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  border-top: 1px solid rgba(108, 99, 255, 0.3);
+  border-bottom: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navMobile {
+  padding: 30px 20px;
+}
+
+.navListMobile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navItemMobile {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.4s ease;
+}
+
+.mobileMenuOpen .navItemMobile {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileMenuOpen .navItemMobile:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.mobileMenuOpen .navItemMobile:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.mobileMenuOpen .navItemMobile:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.mobileMenuOpen .navItemMobile:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.navLinkMobile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 18px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+}
+
+.navLinkMobile::before {
+  content: '→';
+  font-weight: bold;
+  color: #6C63FF;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navLinkMobile:hover {
+  color: white;
+  background: rgba(108, 99, 255, 0.15);
+  border-color: rgba(108, 99, 255, 0.5);
+  transform: translateX(10px);
+  padding-left: 40px;
+}
+
+.navLinkMobile:hover::before {
+  opacity: 1;
+}
+
+.navLinkActiveMobile {
+  color: white;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.2) 0%, rgba(255, 101, 132, 0.2) 100%);
+  border: 1px solid rgba(108, 99, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+}
+
+.mobileAuth {
+  margin-top: 40px;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease 0.5s;
+}
+
+.mobileMenuOpen .mobileAuth {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loginButtonMobile {
+  width: 100%;
+  background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+}
+
+.loginButtonMobile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 90px;
+    padding: 0 30px;
+  }
+
+  .mobileMenu {
+    top: 90px;
+  }
+
+  .logoImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logoText {
+    font-size: 30px;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+
+  .navDesktop {
+    display: block;
+  }
+
+  .authContainer {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navList {
+    gap: 35px;
+  }
+
+  .navLink {
+    font-size: 17px;
+    padding: 14px 24px;
+  }
+
+  .loginButton {
+    padding: 16px 36px;
+    font-size: 17px;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  animation: fadeInDown 0.5s ease-out;
+}

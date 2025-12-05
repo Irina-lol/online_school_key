@@ -1,0 +1,159 @@
+.homePage {
+  min-height: 100vh;
+}
+
+.coursesSection {
+  padding: 80px 0;
+  background: #F8F9FF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #2D2B55;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sectionTitle i {
+  color: #6C63FF;
+  font-size: 36px;
+}
+
+.sectionSubtitle {
+  font-size: 20px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+}
+
+.coursesGridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.paginationButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px solid rgba(108, 99, 255, 0.2);
+  background: white;
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationButton:hover {
+  border-color: #6C63FF;
+  color: #6C63FF;
+  transform: translateY(-2px);
+}
+
+.paginationButton.active {
+  background: linear-gradient(135deg, #6C63FF, #4A44C6);
+  color: white;
+  border-color: transparent;
+}
+
+.paginationDots {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+@media (max-width: 1200px) {
+  .coursesGrid {
+    gap: 30px;
+  }
+
+  .coursesGridWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coursesSection {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .coursesGridWrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .paginationButton {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 18px;
+  }
+}
