@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.761d7072.css",
+    "main.js": "/static/js/main.f7116638.js",
+    "static/media/Ключ прозрачный.png": "/static/media/Ключ прозрачный.ad3a4a7bc5ac8fa439c1.png",
+    "index.html": "/index.html",
+    "main.761d7072.css.map": "/static/css/main.761d7072.css.map",
+    "main.f7116638.js.map": "/static/js/main.f7116638.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761d7072.css",
+    "static/js/main.f7116638.js"
+  ]
+}
